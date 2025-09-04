@@ -18,13 +18,13 @@ This folder contains projects related to **deep learning** — from foundational
 
 ---
 
-### 2. **Driver Drowsiness Detection** (`notebooks/driver_drowsiness_detection.ipynb`)  
-   - Vision-based **CNN model** to detect drowsy drivers from webcam images.  
-   - Applied **transfer learning (VGG16)** for feature extraction.  
-   - Achieved ~89% accuracy on test data.  
-   - Tools: TensorFlow/Keras, OpenCV  
-   - Example:  
-     ![Drowsiness Demo](images/drowsiness_demo.png)  
+### 2. **Neural Network Implementation (Scratch & Keras)** (`notebooks/Neural Network Implementation from Scratch and with Keras on MNIST.ipynb`)  
+   - Implemented a simple **neural network from scratch** using **NumPy** (sigmoid activation, forward & backward propagation, SGD).  
+   - Trained the scratch-built model on a **small synthetic dataset** to validate learning.  
+   - Preprocessed and loaded the **MNIST dataset** for digit recognition.  
+   - Built and trained a **Keras-based neural network** for handwritten digit classification.  
+   - Tools: Python, NumPy, TensorFlow/Keras  
+   - Example: trained model achieved high accuracy on MNIST with Keras implementation.
 
 ---
 
