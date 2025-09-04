@@ -47,9 +47,33 @@ This folder contains projects related to **deep learning** — from foundational
    - Successfully classifies handwritten digits with very high accuracy. 
 ---
 
-### 4. **CNN vs MLP Comparison** (`notebooks/cnn_vs_mlp_comparison.ipynb`)  
-   - Compared performance of **Convolutional Neural Networks** vs traditional fully-connected networks.  
-   - Analyzed training curves, overfitting, and generalization.  
-   - Tools: TensorFlow, Keras, Matplotlib  
-   - Example:  
-     ![Training Curves](images/training_curves.png)  
+### 4. **Image Classification with Transfer Learning (VGG16)** (`notebooks/VGG_for_classification.ipynb`)  
+   - Built a **10-class image classification model** using **transfer learning** with VGG16.  
+   - Dataset: 10 categories (c0–c9), split into train/validation/test sets.  
+
+**Key Steps:**  
+- **Setup & Paths**: Configured dataset paths, set random seeds.  
+- **Data Loading**: Loaded metadata (CSV), verified image paths, and visualized class distribution.  
+- **Data Splitting**: Train (80%), Validation (10%), Test (10%).  
+- **Data Augmentation**: Rotation, shifting, flipping, normalization (via `ImageDataGenerator`).  
+- **Model Building**:  
+  - Base: VGG16 pre-trained on ImageNet (frozen layers).  
+  - Custom Head: Flatten → Dense(256, ReLU) → Dropout(0.5) → Dense(10, Softmax).  
+  - Loss: categorical crossentropy | Optimizer: Adam.  
+- **Training**:  
+  - 30 epochs with **early stopping** and **model checkpointing**.  
+  - Achieved ~94% validation accuracy.  
+- **Fine-Tuning**:  
+  - Unfroze last 15 layers of VGG16.  
+  - Trained 10 more epochs with LR = 1e-5.  
+  - Achieved ~98% validation accuracy.  
+- **Model Saving & Evaluation**: Saved as `final_model.keras`, evaluated successfully on test set.  
+
+**Key Techniques:**  
+- Transfer learning with VGG16  
+- Data augmentation  
+- Learning rate scheduling  
+- Fine-tuning pre-trained models  
+- Callbacks (early stopping, checkpointing)  
+
+*Tools: TensorFlow/Keras, Pandas, Matplotlib*    
