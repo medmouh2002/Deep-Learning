@@ -28,14 +28,23 @@ This folder contains projects related to **deep learning** — from foundational
 
 ---
 
-### 3. **MNIST Digit Recognition** (`notebooks/mnist_digit_recognition.ipynb`)  
-   - Implemented a **CNN from scratch** for handwritten digit classification.  
-   - Compared performance against a baseline MLP model.  
-   - Achieved >98% accuracy on the MNIST dataset.  
-   - Tools: TensorFlow, Matplotlib  
-   - Example:  
-     ![MNIST Results](images/mnist_results.png)  
-
+### 3.**MNIST Digit Classification (Deep Neural Network)** (`notebooks/MNIST Digit Classification Neural Network.ipynb`)  
+   - Implemented a **fully connected neural network** for handwritten digit classification using the MNIST dataset.  
+   - **Data preprocessing**: pixel normalization + one-hot encoding of labels.  
+   - **Model architecture**:  
+     - Input layer: 784 neurons (28×28 pixels)  
+     - Hidden layers: 3 layers × 128 neurons each (ReLU activation)  
+     - Output layer: 10 neurons (softmax)  
+   - **Training setup**:  
+     - Optimizer: Adam  
+     - Loss: Categorical Crossentropy  
+     - Epochs: 10  
+     - Batch size: 20  
+   - **Performance**:  
+     - Final accuracy: ~99.4%  
+     - Parameters: 328,160 total (109,386 trainable)  
+   - Tools: TensorFlow/Keras, NumPy  
+   - Successfully classifies handwritten digits with very high accuracy. 
 ---
 
 ### 4. **CNN vs MLP Comparison** (`notebooks/cnn_vs_mlp_comparison.ipynb`)  
